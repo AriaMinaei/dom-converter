@@ -1,0 +1,18 @@
+{
+  "name": "dummer",
+  "version": "0.0.0",
+  "description": "converts bare objects to DOM objects",
+  "main": "scripts/js/lib/dummer.js",
+  "dependencies": {
+    "utila": "~0.1.0"
+  },
+  "devDependencies": {
+    "little-popo": "~0.1.0"
+  },
+  "scripts": {
+    "test": "node ./node_modules/coffee-script/bin/cake test",
+    "prepublish": "node ./node_modules/coffee-script/bin/cake build"
+  },
+  "author": "Aria Minaei",
+  "license": "MIT"
+}
