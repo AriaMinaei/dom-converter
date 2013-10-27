@@ -60,7 +60,7 @@ it "should work", ->
 			a: 'text'
 		}
 		{
-			b: ['b1', 'b2']
+			'b.someClass': ['b1', 'b2']
 		}
 		{
 			c: [
@@ -98,6 +98,9 @@ it "should work", ->
 
 	a.next.should.equal b
 	b.prev.should.equal a
+	b.attribs.should.be.like
+
+		class: 'someClass'
 
 	bChildren = b.children
 
@@ -105,3 +108,19 @@ it "should work", ->
 	bChildren[1].should.be.like {type: 'text', data: 'b2'}
 
 	ret.should.have.deep.property '[2].children[1].name', 'e'
+
+describe "_parseTag"
+
+it "should work", ->
+
+	dummer.
+	_parseTag('tagName#id.c1.c2[a=b, d="1 2 3"]')
+	.should.be.like
+
+		name: 'tagName'
+
+		attribs:
+
+			id: 'id'
+
+			class: 'c1 c2'
