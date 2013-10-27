@@ -16,39 +16,7 @@ it "should not work with other types", ->
 
 	(-> dummer.toDom 'asdfsdf').should.throw Error
 
-describe "_sanitizeInput()"
 
-it "should turn objects into arrays", ->
-
-	o =
-
-		a: 'text'
-		b: ['b1', 'b2']
-		c:
-
-			d: 'text'
-			e: null
-
-	ret = dummer._sanitizeInput(o)
-
-	ret.should.be.like [
-
-		{
-			a: 'text'
-		}
-		{
-			b: ['b1', 'b2']
-		}
-		{
-			c: [
-
-				{d: 'text'}
-				{e: []}
-
-			]
-		}
-
-	]
 
 describe "_children()"
 

@@ -1,4 +1,5 @@
 {object} = require 'utila'
+sanitizer = require './sanitizer'
 
 module.exports = dummer =
 
@@ -10,53 +11,9 @@ module.exports = dummer =
 
 				throw Error "toDom() only accepts arrays and bare objects as input"
 
-			o = dummer._objectToArray o
+		o = sanitizer.sanitize o
 
 		dummer._children o
-
-	_objectToArray: (o) ->
-
-		a = []
-
-		for own key, val of o
-
-			cur = {}
-
-			cur[key] = dummer._sanitizeInput val
-
-			a.push cur
-
-		a
-
-	_sanitizeInput: (val) ->
-
-
-		if object.isBareObject val
-
-			return dummer._objectToArray val
-
-		else if Array.isArray val
-
-			return dummer._sanitizeArrayInput val
-
-		else if val is null or typeof val is 'undefined'
-
-			return []
-
-		else
-
-			return val
-
-	_sanitizeArrayInput: (a) ->
-
-		ret = []
-
-		for v in a
-
-			ret.push dummer._sanitizeInput v
-
-		ret
-
 
 	_children: (a, parent = null) ->
 
@@ -120,6 +77,7 @@ module.exports = dummer =
 
 		else
 
+			inspect o
 			throw Error "_objectToDom()'s key's value must only be a string or an array"
 
 		node.type = 'tag'

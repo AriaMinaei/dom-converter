@@ -7,7 +7,8 @@
     "utila": "~0.1.0"
   },
   "devDependencies": {
-    "little-popo": "~0.1.0"
+    "little-popo": "~0.1.0",
+    "coffee-script": "~1.6.3"
   },
   "scripts": {
     "test": "node ./node_modules/coffee-script/bin/cake test",
