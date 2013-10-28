@@ -1,8 +1,8 @@
 {
-  "name": "dummer",
+  "name": "dom-converter",
   "version": "0.0.0",
-  "description": "converts bare objects to DOM objects",
-  "main": "scripts/js/lib/dummer.js",
+  "description": "converts bare objects to DOM objects or xml representations",
+  "main": "scripts/js/lib/domConverter.js",
   "dependencies": {
     "utila": "~0.1.0"
   },
