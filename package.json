@@ -1,10 +1,10 @@
 {
   "name": "dom-converter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "converts bare objects to DOM objects or xml representations",
   "main": "scripts/js/lib/domConverter.js",
   "dependencies": {
-     "utila": "0.3.0-beta1"
+     "utila": "~0.3"
   },
   "devDependencies": {
     "coffee-script": "~1.6.3",
