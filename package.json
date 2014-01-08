@@ -1,6 +1,6 @@
 {
   "name": "dom-converter",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "converts bare objects to DOM objects or xml representations",
   "main": "scripts/js/lib/domConverter.js",
   "dependencies": {
@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "coffee-script": "~1.6.3",
-    "little-popo": "~0.1.4"
+    "little-popo": "~0.1"
   },
   "scripts": {
     "test": "node ./node_modules/coffee-script/bin/cake test",
