@@ -3,7 +3,8 @@
 
 xeno/**
 node_modules
-scripts/dist
+src
+test
 
 -p
 

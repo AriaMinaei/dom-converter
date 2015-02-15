@@ -13,7 +13,7 @@ module.exports = self =
 
 	object2markup: (o) ->
 
-		dom = self.toDom o
+		dom = self.objectToDom o
 
 		domToMarkup.convert dom
 
