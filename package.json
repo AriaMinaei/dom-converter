@@ -1,6 +1,6 @@
 {
   "name": "dom-converter",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "converts bare objects to DOM objects or xml representations",
   "main": "lib/domConverter.js",
   "dependencies": {
