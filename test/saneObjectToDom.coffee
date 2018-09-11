@@ -1,13 +1,9 @@
 s2d = require '../src/saneObjectToDom'
 
 describe "saneObjectToDom", ->
-
 	describe "_arrayToChildren()", ->
-
 		it "should work", ->
-
 			ret = s2d._arrayToChildren [
-
 				{
 					a: 'text'
 				}
@@ -22,14 +18,12 @@ describe "saneObjectToDom", ->
 
 					]
 				}
-
 			]
 
 			ret.should.be.an 'array'
 			ret.should.have.length.of 3
 
 			for node in ret
-
 				node.should.be.an 'object'
 				node.should.have
 				.keys ['type', 'name', 'attribs', 'children', 'next', 'prev', 'parent']
@@ -51,7 +45,6 @@ describe "saneObjectToDom", ->
 			a.next.should.equal b
 			b.prev.should.equal a
 			b.attribs.should.be.like
-
 				class: 'someClass'
 
 			bChildren = b.children
@@ -63,17 +56,11 @@ describe "saneObjectToDom", ->
 
 
 	describe "_parseTag", ->
-
 		it "should work", ->
-
 			s2d.
 			_parseTag('tagName#id.c1.c2[a=b, d="1 2 3"]')
 			.should.be.like
-
 				name: 'tagName'
-
 				attribs:
-
 					id: 'id'
-
 					class: 'c1 c2'
