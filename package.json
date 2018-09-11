@@ -4,7 +4,7 @@
   "description": "converts bare objects to DOM objects or xml representations",
   "main": "lib/domConverter.js",
   "dependencies": {
-     "utila": "~0.3"
+    "utila": "~0.4"
   },
   "devDependencies": {
     "chai": "^1.10.0",
@@ -20,13 +20,10 @@
   "scripts": {
     "test": "mocha \"test/**/*.coffee\"",
     "test:watch": "mocha \"test/**/*.coffee\" --watch",
-
     "compile": "coffee --bare --compile --output ./lib ./src",
     "compile:watch": "jitter src lib -b",
-
     "watch": "npm run compile:watch & npm run test:watch",
     "winwatch": "start/b npm run compile:watch & npm run test:watch",
-
     "prepublish": "npm run compile"
   },
   "author": "Aria Minaei",
